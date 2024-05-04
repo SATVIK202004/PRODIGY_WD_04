@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    animation: moveBackground 30s linear infinite;
+}
+
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.profile-photo {
+    position: absolute;
+    top: 50%;
+    right: 20px; 
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 2px solid #fff;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.profile-photo img {
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover;
+}
+
+.about-text {
+    padding-left: 20px; 
+    padding-right: 320px; 
+}
+
+.btn-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 3; 
+}
+
+.btn-container button {
+    padding: 20px 40px;
+    font-size: 18px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.clock-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    color: #000; 
+    font-size: 36px;
+    z-index: 3; 
+}
+
+.glowing-name {
+    display: inline-block;
+    animation: glowing 2s infinite alternate;
+}
+
+@keyframes glowing {
+    from {
+        text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF, 0 0 40px #00FFFF, 0 0 50px #00FFFF, 0 0 60px #00FFFF, 0 0 70px #00FFFF;
+    }
+    to {
+        text-shadow: 0 0 20px #00FFFF, 0 0 30px #00FFFF, 0 0 40px #00FFFF, 0 0 50px #00FFFF, 0 0 60px #00FFFF, 0 0 70px #00FFFF, 0 0 80px #00FFFF;
+    }
+}
