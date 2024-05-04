@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddisetty Venkat Satvik - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            animation: moveBackground 30s linear infinite;
+        }
+        @keyframes moveBackground {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 100% 0;
+            }
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+        .profile-photo {
+            position: absolute;
+            top: 50%;
+            right: 20px; 
+            transform: translateY(-50%);
+            border-radius: 50%;
+            border: 2px solid #fff;
+            overflow: hidden;
+            z-index: 2;
+        }
+        .profile-photo img {
+            width: 300px; 
+            height: 300px; 
+            object-fit: cover;
+        }
+        .about-text {
+            padding-left: 20px; 
+            padding-right: 320px; 
+        }
+        .btn-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 3; 
+        }
+        .btn-container button {
+            padding: 20px 40px;
+            font-size: 18px;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .clock-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+            border-radius: 10px;
+            color: #000; 
+            font-size: 36px;
+            z-index: 3; 
+        }
+
+        
+        .glowing-name {
+            display: inline-block;
+            animation: glowing 2s infinite alternate;
+        }
+
+        @keyframes glowing {
+            from {
+                text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF, 0 0 40px #00FFFF, 0 0 50px #00FFFF, 0 0 60px #00FFFF, 0 0 70px #00FFFF;
+            }
+            to {
+                text-shadow: 0 0 20px #00FFFF, 0 0 30px #00FFFF, 0 0 40px #00FFFF, 0 0 50px #00FFFF, 0 0 60px #00FFFF, 0 0 70px #00FFFF, 0 0 80px #00FFFF;
+            }
+        }
+    </style>
+</head>
+<body style="background-image: url('friends.jpg'); background-size: cover; background-repeat: no-repeat;">
+    <!-- Display button to show profile -->
+    <div class="btn-container" id="btn-container">
+        <button onclick="showProfile()">Hello! Welcome to my Portfolio
+        click me 👆 to visit to know more about me😊</button>
+    </div>
+
+    <div class="image-container" style="display: none;"> <!-- Initially hidden -->
+        <header>
+            <h1 class="glowing-name">Peddisetty Venkat Satvik</h1>
+            <nav>
+                <ul>
+                    <li><button onclick="loadSection('about')">About</button></li>
+                    <li><button onclick="loadSection('education')">Education</button></li>
+                    <li><button onclick="loadSection('skills')">Skills</button></li>
+                    <li><button onclick="loadSection('contact')">Contact</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Profile photo and details -->
+        <div class="profile-photo">
+            <img src="D:\PRODIGY_WD_04\MY PROFILE PHOTO FOR SUPERSET.jpg" alt="Profile Photo">
+        </div>
+
+        <div class="container">
+            <section id="about" class="section" style="display: none;">
+                <h2>About Me</h2>
+                <div class="about-text">
+                    <p>I am an undergraduate student pursuing Electronics and Communications Engineering at KL University. My greatest strength is my passion for discovering new technologies and seeking ways to improve them. I am excited to face new challenges, keep up with the developments, and improve both personally and professionally through continuous education. I am interested in collaborations, mentorships, and other engagements that will enhance my knowledge to a higher level.</p>
+                    <h3>Hobbies</h3>
+                    <p>Reading books</p>
+                </div>
+            </section>
+
+            <section id="education" class="section" style="display: none;">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>KL University, Vaddeeswaram</h3>
+                    <p>Currently studying Electronics and Communications Engineering</p>
+                    <p>Current CGPA: 9.48</p>
+                </div>
+                <div class="education-item">
+                    <h3>Bhashyam Educational Institutions</h3>
+                    <p>Completed schooling and 12th class</p>
+                    <p>10th Standard: 94%</p>
+                    <p>12th Standard: 93%</p>
+                </div>
+            </section>
+
+            <section id="skills" class="section" style="display: none;">
+                <h2>Skills</h2>
+                <p>Languages: English, Telugu</p>
+                <p>Programming: C Language, HTML, CSS, JavaScript</p>
+            </section>
+
+            <section id="contact" class="section" style="display: none;">
+                <h2>Contact Me</h2>
+                <div class="contact-info">
+                    <p>Email: satvikpeddisetty20@gmail.com</p>
+                    <p>Phone: +91 9347985505</p>
+                    <p>Social Media:</p>
+                    <p>
+                        <a href="https://www.instagram.com/iamsatvik20/" target="_blank">
+                            <img src="D:\PRODIGY_WD_04\instagram.jpg" alt="Instagram">
+                        </a>
+                        <a href="https://www.linkedin.com/in/peddisetty-venkat-satvik-363903284/" target="_blank">
+                            <img src="D:\PRODIGY_WD_04\images.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100094118957923" target="_blank">
+                            <img src="D:\PRODIGY_WD_04\facebook.png" alt="Facebook">
+                        </a>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Display the real-time clock in a big block -->
+    <div class="clock-container">
+        <p id="clock"></p>
+    </div>
+
+    <!-- Add audio player for the song -->
+    <audio controls autoplay loop style="position: absolute; bottom: 20px; right: 20px;">
+        <source src="file:///D:\LEEONA_-_LEEONA_-_Do_I.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Peddisetty Venkat Satvik. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            
+            hours = ('0' + hours).slice(-2);
+            minutes = ('0' + minutes).slice(-2);
+            seconds = ('0' + seconds).slice(-2);
+
+            
+            document.getElementById('clock').textContent = hours + ':' + minutes + ':' + seconds;
+        }
+
+        
+        setInterval(updateClock, 1000);
+
+        function loadSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function showProfile() {
+            var profileSection = document.querySelector('.image-container');
+            var btnContainer = document.getElementById('btn-container');
+            if (profileSection.style.display === 'none') {
+                profileSection.style.display = 'block';
+                btnContainer.style.display = 'none'; // Hide the button container
+            }
+        }
+
+        
+        function playMusic() {
+            var audio = document.querySelector('audio');
+            audio.play();
+        }
+
+        
+        window.addEventListener('DOMContentLoaded', function() {
+            playMusic();
+        });
+    </script>
+</body>
+</html>
